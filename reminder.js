@@ -2,9 +2,13 @@
 
 function setReminder(date, setTimeout) {
   date = new Date();
-  console.log('This is a reminder for ' + date);
+  if (date === new Date(2015, 6, 15)) {
+    console.log('This is a reminder for ' + date);
+  } else {
+    console.log('You have nothing else until:' + new Date(2015, 6, 15, 9));
+  }
 }
 
-setTimeout(setReminder, 5000);
+//setTimeout(setReminder, 5000);
+setTimeout(setReminder, Date());
 
-//implementation is not perfect, need to keep working on this one.
